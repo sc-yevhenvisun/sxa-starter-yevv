@@ -73,14 +73,6 @@ if ($LASTEXITCODE -ne 0) {
     Write-Error "Unexpected error installing Sitecore CLI Plugins"
 }
 
-#####  Remove before production #####
-Write-Host "Set staging configuration for XMCLoud plugin"
-$targetPluginlocation = "$PSScriptRoot\.sitecore\package-cache\nuget\Sitecore.DevEx.Extensibility.XMCloud*\plugin\plugin.json"
-$stagingConfig = "$PSScriptRoot\xmcloud.plugin.staging.json"
-$targetLocationFullName = (gi $targetPluginlocation).FullName
-
-Copy-Item $stagingConfig $targetLocationFullName  -Force
-
 #####################################
 
 Write-Host "Logging into Sitecore..." -ForegroundColor Green
@@ -118,7 +110,6 @@ if ($ClientCredentialsLogin -ne "true") {
     Write-Host "Opening site..." -ForegroundColor Green
     
     Start-Process https://xmcloudcm.localhost/sitecore/
-    Start-Process https://www.sxastarter.localhost/
 }
 
 Write-Host ""
