@@ -115,7 +115,10 @@ const NavigationList = (props: NavigationProps) => {
   }
 
   return (
-    <li className={props.fields.Styles.concat('rel-level' + props.relativeLevel).join(' ')} key={props.fields.Id}>
+    <li
+      className={props.fields.Styles.concat('rel-level' + props.relativeLevel).join(' ')}
+      key={props.fields.Id}
+    >
       <div className="navigation-title">
         <Link field={getLinkField(props)} title={title} onClick={props.handleClick}>
           {getNavigationText(props)}
@@ -125,4 +128,3 @@ const NavigationList = (props: NavigationProps) => {
     </li>
   );
 };
-

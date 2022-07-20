@@ -3,7 +3,7 @@ a[target='_blank']:after {
 }
 
 /*
-  Hides Sitecore editor markup,
+  Hides Sitecore Experience Editor markup,
   if you run the app in connected mode while the Sitecore cookies
   are set to edit mode.
 */

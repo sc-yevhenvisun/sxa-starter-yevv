@@ -1,3 +1,4 @@
+
 html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
@@ -11,7 +12,7 @@ body {
   position: relative;
   overflow: auto;
   color: $text-basic;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   background: $page-bg;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -63,10 +64,6 @@ h6 {
   font-size: 0.67em;
 }
 
-ul li {
-  list-style-type: none;
-}
-
 .xa-variable {
   border: 0px;
   padding: 1px;
@@ -83,12 +80,7 @@ ul li {
 }
 
 //End navigation bar fix
+
 .menu-mobile-navigate {
   display: none;
-}
-
-#header, #content, #footer, .sc-jss-empty-placeholder {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
 }
